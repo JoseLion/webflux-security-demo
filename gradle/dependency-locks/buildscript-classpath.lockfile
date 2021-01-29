@@ -1,0 +1,38 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+com.fasterxml.jackson.core:jackson-annotations:2.11.4
+com.fasterxml.jackson.core:jackson-core:2.11.4
+com.fasterxml.jackson.core:jackson-databind:2.11.4
+com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.4
+com.googlecode.javaewah:JavaEWAH:1.1.7
+com.jcraft:jsch:0.1.55
+com.jcraft:jzlib:1.1.1
+commons-codec:commons-codec:1.11
+commons-logging:commons-logging:1.2
+io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.0.11.RELEASE
+io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE
+name.remal.sonarlint:name.remal.sonarlint.gradle.plugin:1.2.0
+name.remal.tools:common:1.26.147
+name.remal:gradle-plugins-api:1.2.0
+name.remal:gradle-plugins-kotlin-dsl:1.2.0
+name.remal:gradle-plugins:1.2.0
+net.java.dev.jna:jna-platform:5.5.0
+net.java.dev.jna:jna:5.5.0
+org.apache.commons:commons-compress:1.20
+org.apache.httpcomponents:httpclient:4.5.13
+org.apache.httpcomponents:httpcore:4.4.13
+org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:5.10.0.202012080955-r
+org.eclipse.jgit:org.eclipse.jgit:5.10.0.202012080955-r
+org.jdom:jdom2:2.0.6
+org.ow2.asm:asm-analysis:9.0
+org.ow2.asm:asm-commons:9.0
+org.ow2.asm:asm-tree:9.0
+org.ow2.asm:asm-util:9.0
+org.ow2.asm:asm:9.0
+org.springframework.boot:org.springframework.boot.gradle.plugin:2.4.2
+org.springframework.boot:spring-boot-buildpack-platform:2.4.2
+org.springframework.boot:spring-boot-gradle-plugin:2.4.2
+org.springframework.boot:spring-boot-loader-tools:2.4.2
+org.springframework:spring-core:5.3.3
+org.springframework:spring-jcl:5.3.3

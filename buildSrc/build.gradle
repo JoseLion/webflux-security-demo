@@ -1,0 +1,8 @@
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation('org.flywaydb:flyway-gradle-plugin:7.5.0')
+  implementation('org.yaml:snakeyaml:1.27')
+}

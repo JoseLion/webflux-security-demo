@@ -1,0 +1,78 @@
+buildscript {
+  configurations.classpath {
+    resolutionStrategy.activateDependencyLocking()
+  }
+}
+
+plugins {
+  id 'checkstyle'
+  id 'java'
+
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'org.springframework.boot' version '2.4.2'
+
+  id 'name.remal.sonarlint' version '1.2.0'
+  id 'org.flywaydb.flyway'
+}
+
+apply plugin: AutoPackageInfoPlugin
+apply plugin: MigrationsPlugin
+
+group = 'com.github.joselion'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+springBoot {
+  mainClassName = "${group}.webfluxsecuritydemo.WebfluxSecurityDemoApplication"
+}
+
+configurations {
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
+}
+
+checkstyle {
+  toolVersion = '8.39'
+  sourceSets = sourceSets
+}
+
+sonarlint {
+  excludes {
+    message 'java:S4032' // Allow packages only containing `package-info.java`
+    message 'java:S107' // Allow constructors with more than 7 parameters
+  }
+}
+
+dependencyLocking {
+  lockAllConfigurations()
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  annotationProcessor('org.projectlombok:lombok')
+
+  compileOnly('com.google.code.findbugs:jsr305:3.0.2')
+  compileOnly('org.projectlombok:lombok')
+
+  implementation('com.github.joselion:maybe:1.0.2-GA')
+  implementation('io.r2dbc:r2dbc-postgresql')
+  implementation('org.flywaydb:flyway-core')
+  implementation('org.springframework.boot:spring-boot-starter-data-r2dbc')
+  implementation('org.springframework.boot:spring-boot-starter-security')
+  implementation('org.springframework.boot:spring-boot-starter-webflux')
+  implementation('org.springframework.session:spring-session-core')
+
+  runtimeOnly('org.postgresql:postgresql')
+
+  testImplementation('io.projectreactor:reactor-test')
+  testImplementation('org.springframework.boot:spring-boot-starter-test')
+  testImplementation('org.springframework.security:spring-security-test')
+}
+
+test {
+  useJUnitPlatform()
+}
